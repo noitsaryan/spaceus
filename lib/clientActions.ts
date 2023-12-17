@@ -3,6 +3,7 @@ import toast from "react-hot-toast";
 
 export const clientAction = async (e: FormData) => {
     const response = await createLead(e);
+    if (!response) return { error: response, success: false }
     if (!response.success) {
         toast.error(response.error)
     } else {

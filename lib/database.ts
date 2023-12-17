@@ -9,9 +9,7 @@ export const connectDB = async () => {
     if (mongoose.connection.readyState === 1) {
       return mongoose.connection.asPromise();
     }
-
-    return await mongoose.connect("mongodb+srv://spaceusindia:Kg4ci6loASBd7srP@spaceuscluster.fvht9kt.mongodb.net/");
-
+    await mongoose.connect(process.env.MONGO_URI!);
   } catch (error) {
     console.log(error);
   }
