@@ -3,12 +3,11 @@ import toast from "react-hot-toast";
 
 export const clientAction = async (e: FormData) => {
     const response = await createLead(e);
-    console.log(response)
-    // if (!response.success) {
-    //     toast.error(response.error)
-    // } else {
-    //     toast.success(response.error)
-    // }
+    if (!response.success) {
+        toast.error(response.error)
+    } else {
+        toast.success(response.error)
+    }
 }
 export function isValidPhoneNumber(phone: string | undefined): boolean {
     if (!phone || phone.length !== 10) {
