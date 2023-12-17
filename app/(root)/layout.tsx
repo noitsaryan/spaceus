@@ -19,6 +19,9 @@ export default function RootLayout({
       <body className={font.className}>
         <main className='md:hidden'>
           <Header />
+          <div className='md:block'>
+            <h1> Only Available in mobile devices. </h1>
+          </div>
           {children}
         </main>
         <Toaster position="bottom-center"
