@@ -19,7 +19,7 @@ export default function RootLayout({
       <body className={font.className}>
         <main className='md:hidden'>
           <Header />
-          <div className='md:block'>
+          <div className='md:block hidden'>
             <h1> Only Available in mobile devices. </h1>
           </div>
           {children}
