@@ -3,6 +3,8 @@ import './globals.css'
 import Header from '@/components/Header'
 import { Source_Sans_3 } from "next/font/google"
 import { Toaster } from 'react-hot-toast'
+import { ImWhatsapp } from "react-icons/im";
+import Link from 'next/link'
 export const metadata: Metadata = {
   title: 'Spaceus - Complete home interior solutions.',
   description: 'Spaceus excels in complete home interior solutions which offers complete concept to contruction services.',
@@ -19,8 +21,8 @@ export default function RootLayout({
       <body className={font.className}>
         <main className='md:hidden'>
           <Header />
-          <div className='md:block hidden'>
-            <h1> Only Available in mobile devices. </h1>
+          <div className='bg-white p-2 fixed right-0 border top-1/2 -translate-y-1/2 z-[200] rounded-full'>
+            <Link href="https://wa.link/c63frz" target='_blank'><ImWhatsapp className="text-green-500 text-4xl" /></Link>
           </div>
           {children}
         </main>
